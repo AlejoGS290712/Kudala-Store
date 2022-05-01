@@ -11,13 +11,12 @@
     <title>Factura</title>
 </head>
 <body>        
-    <div class="Container p-4">
+    <div class="container p-4 w-50 ">
 
-        <h3 class="text-center">Factura</h3>
+        <h3 class="text-center" style="background-color: #ec7c26;">Factura</h3>
         
         <div class="row justify-content-between mb-4">
-            <fieldset class="col-4
-            ">
+            <fieldset class="col-4">
                 <legend>Proveedor</legend>
     
                 <label for="idlblNameProv">Nombre:</label>
@@ -38,38 +37,49 @@
     
                 <label for="idlblFechaFactura">Fecha:</label>                
                 <input class="w-100" type="text" name="txtFecha" id="idtxtFecha">   
-            </fieldset>
-    
+            </fieldset>                          
+        </div>         
+        
+        <div class="row mb-4">
             <fieldset class="col-4">
                 <legend>Cliente</legend>
     
-                <label for="idlblNameClie">Nombre:</label>
-                <label id="idlblNameClie"></label>
+                <label for="idlblNameProv">Nombre:</label>
+                <input class="w-100" type="text" name="txtNameProv" id="idtxtNameProv">            
     
-                <label for="idlblTelClie">Telefono:</label>
-                <label id="idlblTelClie"></label>
+                <label for="idlblTelProv">Telefono:</label>
+                <input class="w-100" type="text" name="txtTelProv" id="idtxtTelProv">
     
-                <label for="idlblDirecClie">Direccion:</label>
-                <label id="idlblDirecClie"></label>
+                <label for="idlblDirecProv">Direccion:</label>
+            <input class="w-100" type="text" name="txtDireccion" id="idtxtDireccion">                
             </fieldset>
-        </div>            
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <h4>Productos</h4>
+                <table class="table table-striped">                
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Cant.</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                        </tr>                        
+                    </thead>
 
-        <h4>Productos</h4>
-        <table id="tblProductos">                
-            <header>
-                <th>ID</th>
-                <th>Cant.</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-            </header>
-            <tr>
+                    <tbody>
 
-            </tr>
-            <footer>
-                <th colspan="3">Total</th>
-                <th>$</th>
-            </footer>
-        </table>        
+                    </tbody>
+
+                    <tfooter>
+                        <th colspan="3">Total</th>
+                        <th>$</th>
+                    </tfooter>
+                </table>
+            </div>
+        </div>
+                
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
