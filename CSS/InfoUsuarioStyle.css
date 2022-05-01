@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding:0;    
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form-InfoUsuario{        
+    width: 70%;
+    padding: 15px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    font-size: 17px;      
+}
+
+.form-InfoUsuario h3{
+    text-align: center;    
+    margin-bottom: 20px;
+    background-color: #ec7c26;
+}
+
+.form-InfoUsuario fieldset, h3{
+    border-style: none;
+    padding: 3%; 
+    margin-top: 15px;
+    background-color: #8d8d8d1e; 
+    border-radius: 5px;
+}
+
+.form-InfoUsuario legend{
+    color: #ec7c26;
+}
+
+.infoUsuario{
+    width: 100%;
+    padding: 15px;   
+    border: solid 1px #4d4d4d8e;
+    border-radius: 5px;
+    margin-bottom: 20px;  
+    font-size: 17px;   
+    background-color: #2525271e;
+}
+
+.infoUsuario:disabled {
+    border: none;
+}
+
+.botons{    
+    width: 40%;    
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 17px;      
+}
+
+#fsModificar, #fsAceptarCancelar{
+    text-align: center;
+}
+
+#fsAceptarCancelar{
+    display: none;
+}
+
+#idbtnModificar{
+    background-color: #008bcca6;
+}
+
+#idbtnAceptar{
+    background-color: #00cc2ca6;
+}
+
+#idbtnCancelar{
+    background-color: #cc0000a6;
+}
+
+#idbtnModificar:hover ,#idbtnAceptar:hover, #idbtnCancelar:hover{
+    background-color: #ec7c26;
+}
