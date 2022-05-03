@@ -10,76 +10,88 @@
     <link rel="stylesheet" href="../CSS/FacturaStyle.css">
     <title>Factura</title>
 </head>
-<body>        
-    <div class="container p-4 w-50 ">
+<body>
+    
+    <div class="container-fluid" style="background-image: url('../CSS/Img/FacturaFondoIMG.jpg');      
+    background-size: 50% 100%; background-repeat: no-repeat; background-position: right;">
 
-        <h3 class="text-center" style="background-color: #ec7c26;">Factura</h3>
-        
-        <div class="row justify-content-between mb-4">
-            <fieldset class="col-4">
-                <legend>Proveedor</legend>
-    
-                <label for="idlblNameProv">Nombre:</label>
-                <input class="w-100" type="text" name="txtNameProv" id="idtxtNameProv">            
-    
-                <label for="idlblTelProv">Telefono:</label>
-                <input class="w-100" type="text" name="txtTelProv" id="idtxtTelProv">
-    
-                <label for="idlblDirecProv">Direccion:</label>
-                <input class="w-100" type="text" name="txtDireccion" id="idtxtDireccion">                
-            </fieldset>
-    
-            <fieldset class="col-2">
-                <legend>Factura</legend>
-    
-                <label for="idlblidFactura">ID Factura:</label>
-                <input class="w-100" type="text" name="txtIdFactura" id="idtxtIdFactura">
-    
-                <label for="idlblFechaFactura">Fecha:</label>                
-                <input class="w-100" type="text" name="txtFecha" id="idtxtFecha">   
-            </fieldset>                          
-        </div>         
-        
-        <div class="row mb-4">
-            <fieldset class="col-4">
-                <legend>Cliente</legend>
-    
-                <label for="idlblNameProv">Nombre:</label>
-                <input class="w-100" type="text" name="txtNameProv" id="idtxtNameProv">            
-    
-                <label for="idlblTelProv">Telefono:</label>
-                <input class="w-100" type="text" name="txtTelProv" id="idtxtTelProv">
-    
-                <label for="idlblDirecProv">Direccion:</label>
-            <input class="w-100" type="text" name="txtDireccion" id="idtxtDireccion">                
-            </fieldset>
-        </div>
-        
         <div class="row">
-            <div class="col">
-                <h4>Productos</h4>
-                <table class="table table-striped">                
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Cant.</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
-                        </tr>                        
-                    </thead>
+            <div class="col-6" style="box-shadow: 7px 13px 37px #000;">
+                    
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-center" style="color: #ec7c26;">KudalaStore</h1>
+                    </div>
+                </div>
+                <div class="row" style="background-color: #ec7c26;">
+                    <div class="col-3 offset-md-7" style="background-color: white;">
+                        <h3 class="text-center" style="color: #252527d0;">Factura</h3>
+                    </div>            
+                </div>        
+                
+                <div class="row justify-content-between mb-4">
+                    <fieldset class="col-4">
+                        <legend>Proveedor</legend>
+            
+                        <label for="idlblNameProv">Nombre:</label>
+                        <input class="w-100 border-0" type="text" name="txtNameProv" id="idtxtNameProv">            
+            
+                        <label for="idlblTelProv">Telefono:</label>
+                        <input class="w-100 border-0" type="text" name="txtTelProv" id="idtxtTelProv">
+            
+                        <label for="idlblDirecProv">Direccion:</label>
+                        <input class="w-100 border-0" type="text" name="txtDireccion" id="idtxtDireccion">                
+                    </fieldset>
+            
+                    <fieldset class="col-3">
+                        <legend>Factura</legend>
+            
+                        <label for="idlblidFactura">ID Factura:</label>
+                        <input class="w-100 border-0" type="text" name="txtIdFactura" id="idtxtIdFactura">
+            
+                        <label for="idlblFechaFactura">Fecha:</label>                
+                        <input class="w-100 border-0" type="text" name="txtFecha" id="idtxtFecha">   
+                    </fieldset>                          
+                </div>         
+                
+                <div class="row mb-4">
+                    <fieldset class="col-4">
+                        <legend>Cliente</legend>
+            
+                        <label for="idlblNameProv">Nombre:</label>
+                        <input class="w-100 border-0" type="text" name="txtNameProv" id="idtxtNameProv" >            
+            
+                        <label for="idlblTelProv">Telefono:</label>
+                        <input class="w-100 border-0" type="text" name="txtTelProv" id="idtxtTelProv">
+            
+                        <label for="idlblDirecProv">Direccion:</label>
+                    <input class="w-100 border-0" type="text" name="txtDireccion" id="idtxtDireccion">                
+                    </fieldset>
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <h4 class="text-center">Productos</h4>
+                        <table class="table table-striped">                
+                          
+                            <tr class="table-dark">
+                                <th scope="col">ID</th>
+                                <th scope="col">Cant.</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                            </tr>                        
+                            
 
-                    <tbody>
 
-                    </tbody>
-
-                    <tfooter>
-                        <th colspan="3">Total</th>
-                        <th>$</th>
-                    </tfooter>
-                </table>
+                            <th colspan="3">Total</th>
+                            <th>$ </th>
+                            
+                        </table>
+                    </div>
+                </div>         
             </div>
         </div>
-                
+                                                                                       
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
