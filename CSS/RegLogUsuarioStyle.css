@@ -6,7 +6,8 @@
 
 body{
     background-image: url('./Img/RegUsuarioIMG.jpg');      
-    background-size: cover;    
+    background-size: auto;   
+           
 }
 
 .form-register{
@@ -59,6 +60,7 @@ body{
     background: #ec7c26;
     color: white;
     border: none;
+    border-radius: 4px;
     padding: 12px;
     margin: 16px 0;
     font-size: 16px;    
