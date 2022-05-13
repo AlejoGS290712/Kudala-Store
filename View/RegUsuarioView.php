@@ -12,7 +12,7 @@
 </head>
 <body>    
     <div class="container">   
-        <form class="form-register" action="" method="post">
+        <form class="form-register" action="./Controller/UsuarioController.php" method="post">
             <div class="row">
                 <h4>Registro</h4>
             </div>
@@ -30,13 +30,15 @@
                 <input class="infoUsuario" type="password" name="txtContrasenia" id="idContrasenia" placeholder="Ingrese una Contraseña">
             </div>
             <div class="row">
-                <input class="botons" type="submit" value="Registrar">            
+                <input class="botons" type="submit" id="idbtnReg" value="Registrar">            
             </div>
             
             <div class="row">
                 <p><a href="./LogUsuarioView.php"> Ya tengo Cuenta </a></p>
             </div>
         </form>
-    </div>    
+    </div> 
+    
+    <script src="./Js/RegUsuario.js"></script>
 </body>
 </html>
