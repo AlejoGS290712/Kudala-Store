@@ -32,6 +32,21 @@
         $this->ganador = $ganador;
     }
 
+    /**
+     * Este método permite crear una oferta en el sistema.
+     * <b> pre-condición </b> : Ya se debe haber verificado que el ingreso al sistema
+     * <b> post-condición </b> : Se crea una subasta con éxito y se almacena.
+     */
+    public function IngresarDatos($idSubasta, $idProducto, $valorInicial) {
+
+        this->idSubasta = $idSubasta;
+        this->idProducto = $idProducto;
+        this->valorInicial = $valorInicial;
+        this->valorFinal = $valorInicial;
+        this->activa = true;
+        this->ganador = null;
+    }
+
  //Setters y Getters
 
     /**
@@ -152,6 +167,22 @@
         $this->ganador = $ganador;
 
         return $this;
+    }
+
+    /**
+     * Este metodo sirve para mostrar la informacion de una subasta registrada
+     *
+     * <b>Pre-condiciones</b>:Debe haber una subasta con información ya
+     * guardada.
+     * <b>Pos-condiciones</b>:Mostrara la información de una subasta registrado.
+     *
+     * @return informacion de la subasta
+     */
+    public function __toString() {
+
+         $info = "Valor inicial de la subasta: " . $valorInicial
+                . "\nValor actual de la subasta: " . $valorFinal . "\nEstado actual de la subasta: " . $activa;
+        return $info;
     }
 }
 ?>
