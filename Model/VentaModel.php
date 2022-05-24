@@ -29,6 +29,20 @@
         $this->comprador = $comprador;
     }
 
+     /**
+     * Este método permite crear una venta en el sistema.
+     * <b> pre-condición </b> : Ya se debe haber verificado que el ingreso al sistema
+     * <b> post-condición </b> : Se crea una venta con éxito y se almacena.
+     */
+    public function IngresarDatos($idVenta, $idProducto, $precio) {
+
+        this->idVenta = $idVenta;
+        this->idProducto = $idProducto;
+        this->precio = $precio;
+        this->activa = true;
+        this->ganador = null;
+    }
+
  //Setters y Getters
 
     /**
@@ -129,6 +143,22 @@
         $this->comprador = $comprador;
 
         return $this;
+    }
+
+    /**
+     * Este metodo sirve para mostrar la informacion de una venta registrada
+     *
+     * <b>Pre-condiciones</b>:Debe haber una venta con información ya
+     * guardada.
+     * <b>Pos-condiciones</b>:Mostrara la información de una venta registrada.
+     *
+     * @return informacion de la venta
+     */
+    public function __toString() {
+
+         $info = "Precio de la venta: " . $precio
+                . "\nEstado actual de la venta: " . $activa;
+        return $info;
     }
 }
 ?>
