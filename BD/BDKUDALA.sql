@@ -150,11 +150,14 @@ INSERT INTO TipoDocumento VALUES
 ( 'TI', 'Tarjeta de Identidad'),( 'RC', 'Registro Civil');
 
 INSERT INTO TipoTelefono VALUES
+('CLA','Teléfono Clásico'),
 ('FIJ','Teléfono Fijo'),
 ('CEL','Teléfono Celular'),
 ('SAT','Teléfono Satelital');
 
 INSERT INTO TipoUsuario VALUES
+('CD','Cliente Diamante'),
+('CP','Cliente Platino'),
 ('CO','Cliente Ocasional'),
 ('CF','Cliente Frecuente');
 
@@ -189,9 +192,12 @@ INSERT INTO Usuario Values
 INSERT INTO Producto Values
 (01,'Celular','iPhone 13 Pro Max',1,789,6000000.00),
 (02,'Televisor','Televisor Samsung 50 Pulgadas',1,789,3500000.00),
-(03,'Cuadro','Cuadro de Pintura',1,123,00.00);
+(03,'Cuadro','Cuadro de Pintura',1,123,00.00),
+(04,'Bicicleta','BMX Todo Terreno',1,123,1000000.00);
 
 INSERT INTO Categoria Values
+('DEP','Deporte'),
+('AUT','Automoviles'),
 ('TEC','Tecnología'),
 ('HOG','Hogar');
 
@@ -199,14 +205,17 @@ INSERT INTO ProductoCategoria Values
 (01,01,'TEC'),
 (02,01,'TEC'),
 (03,02,'TEC'),
-(04,03,'HOG');
+(04,03,'HOG'),
+(05,04,'DEP');
 
 INSERT INTO Venta Values
 (01,123,"2022-04-01",6000000.00),
 (02,456,"2022-04-07",9500000.00),
-(03,789,"2022-04-20",3500000.00);
+(03,789,"2022-04-20",3500000.00),
+(04,789,"2022-05-12",1000000.00);
 
 INSERT INTO VentaProducto Values
+(05,04,04,1),
 (01,01,01,1),
 (02,01,02,1),
 (03,02,02,1),
@@ -215,7 +224,8 @@ INSERT INTO VentaProducto Values
 INSERT INTO LugarEntrega Values
 (01,789,'MED','Carrera 23 # 54-32'),
 (02,123,'MIA','Av 65 # 01-34'),
-(03,456,'TOK','Calle 09 # 61-12');
+(03,456,'TOK','Calle 09 # 61-12'),
+(04,789,'MED','Carrera 23 # 54-32');
 
 INSERT INTO Transaccion Values
 (01,01,200000.00,1),
@@ -225,7 +235,9 @@ INSERT INTO Transaccion Values
 
 INSERT INTO Subasta Values
 (01,03,1000000.00,5000000.00,1,789),
-(02,03,1000000.00,3000000.00,1,456);
+(02,04,1000000.00,3000000.00,1,456),
+(03,02,1000000.00,3000000.00,1,000),
+(04,01,1000000.00,4000000.00,1,123);
 
 INSERT INTO Puja Values
 (01,01,789,3000000.00),
@@ -410,4 +422,4 @@ BEGIN
 		END IF;
 	END
 $$
-DELIMITER ;
+DELIMITER ;categoria
