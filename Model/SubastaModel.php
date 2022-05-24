@@ -6,7 +6,7 @@
     private $valorInicial;
     private $valorFinal; 
     private $activa; 
-    private $ganador; 
+    private $idGanador; 
 
 
      /* Este metodo crea una subasta con los datos requeridos
@@ -19,17 +19,17 @@
      * @param valorInicial es el valor inicial con el que comienza la subasta
      * @param valorFinal es el valor final con el que termina la subasta
      * @param activa es el estado en el que está la subasta
-     * @param ganador es el usuario ganador de la subasta
+     * @param idGanador es el identificador del usuario ganador de la subasta
      */
     
-    public function __construct( $idSubasta, $idProducto, $valorInicial, $valorFinal, $activa, $ganador )
+    public function __construct( $idSubasta, $idProducto, $valorInicial, $valorFinal, $activa, $idGanador )
     {
         $this->idSubasta = $idSubasta;
         $this->idProducto = $idProducto;
         $this->valorInicial = $valorInicial;
         $this->valorFinal = $valorFinal;
         $this->activa = $activa;
-        $this->ganador = $ganador;
+        $this->idGanador = $idGanador;
     }
 
     /**
@@ -44,7 +44,7 @@
         this->valorInicial = $valorInicial;
         this->valorFinal = $valorInicial;
         this->activa = true;
-        this->ganador = null;
+        this->idGanador = 0;
     }
 
  //Setters y Getters
@@ -150,21 +150,21 @@
     }
 
     /**
-     * Get the value of ganador
+     * Get the value of idGanador
      */ 
-    public function getGanador()
+    public function getIdGanador()
     {
-        return $this->ganador;
+        return $this->idGanador;
     }
 
     /**
-     * Set the value of ganador
+     * Set the value of idGanador
      *
      * @return  self
      */ 
-    public function setGanador($ganador)
+    public function setIdGanador($idGanador)
     {
-        $this->ganador = $ganador;
+        $this->idGanador = $idGanador;
 
         return $this;
     }
