@@ -2,31 +2,27 @@
 	class VentaModel
  {
     private $idVenta;
-    private $idProducto;
-    private $precio;
-    private $activa; 
-    private $comprador; 
-
-
+    private $idComprador;
+    private $fecha;  
+    private $valorTotal;
+   
      /* Este metodo crea una subasta con los datos requeridos
      *
      * <b>Pre-condiciones</b>:Deben haber datos
      * requeridos.<b>Pos-condiciones</b>:Se agrega una nueva subasta al sistema.
      *
      * @param idVenta es el numero de identificacion de la venta
-     * @param idProducto es el numero de identificacion del producto
-     * @param precio es el valor con el que se realizó la venta
-     * @param activa es el estado en el que está la venta
-     * @param comprador es el usuario que compro la el producto ofrecido
+     * @param idcomprador es el identidicador del usuario que compro la el producto ofrecido
+     * @param fecha es el dia que se realizo la venta
+     * @param valorTotal es el valor con el que se realizó la venta
      */
     
-    public function __construct( $idVenta, $idProducto, $precio, $activa, $comprador )
+    public function __construct( $idVenta, $idComprador, $fecha, $valorTotal )
     {
         $this->idVenta = $idVenta;
-        $this->idProducto = $idProducto;
-        $this->precio = $precio;
-        $this->activa = $activa;
-        $this->comprador = $comprador;
+        $this->idComprador = $idComprador;
+        $this->fecha = $fecha;
+        $this->valorTotal = $valorTotal;
     }
 
      /**
@@ -34,13 +30,12 @@
      * <b> pre-condición </b> : Ya se debe haber verificado que el ingreso al sistema
      * <b> post-condición </b> : Se crea una venta con éxito y se almacena.
      */
-    public function IngresarDatos($idVenta, $idProducto, $precio) {
+    public function IngresarDatos($idVenta, $fecha, $valorTotal) {
 
         this->idVenta = $idVenta;
-        this->idProducto = $idProducto;
-        this->precio = $precio;
-        this->activa = true;
-        this->ganador = null;
+        this->fecha = $fecha;
+        this->valorTotal = $valorTotal;
+        this->idComprador = 0;
     }
 
  //Setters y Getters
@@ -66,81 +61,62 @@
     }
 
     /**
-     * Get the value of idProducto
+     * Get the value of idComprador
      */ 
-    public function getIdProducto()
+    public function getIdComprador()
     {
-        return $this->idProducto;
+        return $this->idComprador;
     }
 
     /**
-     * Set the value of idProducto
+     * Set the value of idComprador
      *
      * @return  self
      */ 
-    public function setIdProducto($idProducto)
+    public function setIdComprador($idComprador)
     {
-        $this->idProducto = $idProducto;
+        $this->idComprador = $idComprador;
+
+        return $this;
+    }
+
+
+    /**
+     * Get the value of fecha
+     */ 
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set the value of fecha
+     *
+     * @return  self
+     */ 
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
 
         return $this;
     }
 
     /**
-     * Get the value of precio
+     * Get the value of valorTotal
      */ 
-    public function getPrecio()
+    public function getValorTotal()
     {
-        return $this->precio;
+        return $this->valorTotal;
     }
 
     /**
-     * Set the value of precio
+     * Set the value of valorTotal
      *
      * @return  self
      */ 
-    public function setPrecio($precio)
+    public function setValorTotal($valorTotal)
     {
-        $this->precio = $precio;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of activa
-     */ 
-    public function getActiva()
-    {
-        return $this->activa;
-    }
-
-    /**
-     * Set the value of activa
-     *
-     * @return  self
-     */ 
-    public function setActiva($activa)
-    {
-        $this->activa = $activa;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of comprador
-     */ 
-    public function getComprador()
-    {
-        return $this->comprador;
-    }
-
-    /**
-     * Set the value of comprador
-     *
-     * @return  self
-     */ 
-    public function setComprador($comprador)
-    {
-        $this->comprador = $comprador;
+        $this->valorTotal = $valorTotal;
 
         return $this;
     }
@@ -156,8 +132,8 @@
      */
     public function __toString() {
 
-         $info = "Precio de la venta: " . $precio
-                . "\nEstado actual de la venta: " . $activa;
+         $info = "Valor de la venta: " . $valorTotal
+                . "\nFecha de la venta: " . $fecha;
         return $info;
     }
 }
