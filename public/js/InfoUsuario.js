@@ -65,6 +65,14 @@ function cargarSelectDepartamento(){
         
     pais = ddlPaises.value; 
 
+    if(pais == ""){
+
+        //ddlDepartamentos.value = "";
+        limpiarSelect(ddlDepartamentos);
+        limpiarSelect(ddlCiudades);
+        return;
+    }
+
     httpRequest("InfoUsuario/buscarDepartamentosPorPais/" + pais, function(){
                 
         rpta = quitarhtml(this.responseText);
@@ -79,6 +87,12 @@ function cargarSelectCiudad(){
     
     departamento = ddlDepartamentos.value; 
 
+    if(departamento == ""){
+
+        limpiarSelect(ddlCiudades);
+        return;
+    }
+
     httpRequest("InfoUsuario/buscarCiudadesPorDepartamento/" + departamento, function(){
                 
         rpta = quitarhtml(this.responseText);
@@ -87,11 +101,3 @@ function cargarSelectCiudad(){
 
     });    
 }
-
-
-
-
-
-
-
-
