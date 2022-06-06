@@ -15,9 +15,18 @@
             <div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="<?php echo constant('URL'); ?>Main">Inicio</a></li>                                
-                    <li class="nav-item"><a class="nav-link" href="<?php echo constant('URL'); ?>Ayuda">Ayuda</a></li>                
+                    <li class="nav-item"><a class="nav-link" href="<?php echo constant('URL'); ?>">Explorar</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="<?php echo constant('URL'); ?>">Nosotros</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="<?php echo constant('URL'); ?>">Servicio al cliente</a></li> 
                 </ul>
-            </div>
+            </div>            
+                        
+            <div class="">
+                <form class="d-flex" style="margin: 0;">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">                    
+                    <button class="btn" type="submit"><img src="<?php echo constant('URL');?>/public/Img/busqueda.png" alt=""></button>
+                </form> 
+            </div>              
 
             <div>
                 <!--Items Inicio Sesion y Registro-->
@@ -30,10 +39,15 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo constant('URL'); ?>LogRegUsuario/loadRegUsuario">Registrar</a></li>
                     </ul>
-                </div>
+                </div>                
 
                 <!-- Menu de Usuario -->
-                <div id="MnUsuario" class="dropdown" style="display: none;">                
+                <div id="MnUsuario" class="dropdown" style="display: none;"> 
+                
+                    <a type="button" href="" style="margin-right: 10px ;">
+                        <img src="<?php echo constant('URL'); ?>public/Img/carritoCompras.png">
+                    </a>
+
                     <a type="button" id="dropdownMenuUser" data-bs-toggle="dropdown" aria-expanded="false">
                         <img class="user" src="<?php echo constant('URL'); ?>public/Img/IconUser.png">
                     </a>
@@ -41,6 +55,10 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuUser">
 
                         <li><a class="dropdown-item" href="<?php echo constant('URL'); ?>InfoUsuario/buscarUsuario">Mi Cuenta</a></li>
+                        <li><a class="dropdown-item" href="">Idioma</a></li>
+                        <li><a class="dropdown-item" href="">Pedidos</a></li>
+                        <li><a class="dropdown-item" href="">Devoluciones</a></li>
+                        <li><a class="dropdown-item" href="">Historial</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a id="opcCerrarSesion" class="dropdown-item" href="<?php echo constant('URL'); ?>LogRegUsuario/cerrarSesion">Cerrar Sesion</a></li>
 

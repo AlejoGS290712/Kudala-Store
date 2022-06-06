@@ -8,11 +8,9 @@
 </head>
 <body>
     <?php require 'views/header.php';?>
+    
+    <?php require 'views/main/ListaProductos.php';?>  
 
-    <div>
-        <h1 class="text-center">Bienvenido a KudalaStore</h1>
-    </div>
-
-    <?php require 'views/footer.php'?>  
+    <?php require 'views/footer.php';?>  
 </body>
 </html>
